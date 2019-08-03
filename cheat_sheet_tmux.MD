@@ -1,4 +1,4 @@
-# TMUX CHEAT SHEET
+# TMUX Cheat Sheet
 
 `apt install tmux` OR `brew install tmux` = seriously?
 
