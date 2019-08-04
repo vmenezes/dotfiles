@@ -1,6 +1,8 @@
 # TMUX Cheat Sheet
 
-`apt install tmux` OR `brew install tmux` = seriously?
+`apt install tmux` OR `brew install tmux` = seriously!?
+
+`~/.tmux.conf` = config file for tmux
 
 `tmux` = start tmux in a new session
 
@@ -31,3 +33,5 @@
 `tmux new -S SESSION_NAME` = start new tmux session with a name
 
 `tmux rename-session -t 0 SESSION_NAME` = rename session 0 to SESSION_NAME
+
+`CTRL + b` THEN `[` THEN `ARROW_KEYS` = to scroll thru a tmux pane then press `q` to stop scrolling. Or add `set -g mouse on` to `~/.tmux.conf` to enable mouse scroll/pane switching
