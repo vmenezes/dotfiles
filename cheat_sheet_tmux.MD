@@ -30,7 +30,7 @@
 
 `tmux attach -t SESSION_NUMBER OR SESSION_NAME` = connect to tmux sesion specified
 
-`tmux new -S SESSION_NAME` = start new tmux session with a name
+`tmux new -s SESSION_NAME` = start new tmux session with a name
 
 `tmux rename-session -t 0 SESSION_NAME` = rename session 0 to SESSION_NAME
 
