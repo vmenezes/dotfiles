@@ -4,6 +4,12 @@
 
 `~/.tmux.conf` = config file for tmux
 
+## Basic Conf
+
+Based on https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/
+
+## Basic Commands
+
 `tmux` = start tmux in a new session
 
 `CTRL + b` THEN `%` = split pane into left and right
