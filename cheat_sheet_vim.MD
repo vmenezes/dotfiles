@@ -23,6 +23,12 @@ git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/Vim
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/gitgutter
 ```
 
+### Add Airline Status Bar
+
+```
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+```
+
 ### Add NERDTree
 
 ```
