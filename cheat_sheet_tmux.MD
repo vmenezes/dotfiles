@@ -6,7 +6,9 @@
 
 ## Basic Conf
 
-Based on https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/
+Based on https://thoughtbot.com/blog/how-to-copy-and-paste-with-tmux-on-mac-os-x
+
+# Based on https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/
 
 ## Basic Commands
 
