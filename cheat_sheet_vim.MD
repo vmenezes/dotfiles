@@ -148,6 +148,16 @@ I like to add `set nu` to `~/.vim_runtime/my_configs.vim` to have vim displaying
 
 `ESC` THEN `gg` = navigate to begin of file
 
+`ESC` THEN `zz` = scroll leaving current line in the middle of screen
+
+`ESC` THEN `zt` = scroll leaving current line in the top of screen
+
+`ESC` THEN `zb` = scroll leaving current line in the bottom of screen
+
+`ESC` THEN `CTRL + U` = scroll up half page at a time
+
+`ESC` THEN `CTRL + D` = scroll down half page at a time
+
 `ESC` THEN `0` = navigate to begin of line
 
 `ESC` THEN `$` = navigate to end of line
