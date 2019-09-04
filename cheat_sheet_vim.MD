@@ -29,7 +29,7 @@ git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/g
 git clone git@github.com:scrooloose/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 ```
 
-### Better Colors
+### Better Low Contrast Colors
 
 ```
 echo "export TERM=xterm-256color" >> ~/.zshrc
@@ -37,13 +37,30 @@ echo "export TERM=xterm-256color" >> ~/.zshrc
 wget https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -O ~/.vim/colors/zenburn.vim
 ```
 
-And add the following to `~/.vimrc`
+### Custom `~/.vimrc` For Plugins Above And Many More
 
 ```
 set encoding=utf-8
 set noswapfile
+
+" Enable line numbers(you can do :set nonumbers to disable)
 set nu
-syntax on
+
+" Enable mouse(you can click to go to a place or select with mouse + yy or d
+" to copy or delete)
+set mouse=a
+
+" Highlight curson line
+set cursorline
+
+" Automatically scrolls when cursor gets 10 lines from bottom/top
+set scrolloff=10
+
+" Yank copy to copy to clipboard
+set clipboard=unnamed
+
+" Display column at 80th character
+:set colorcolumn=80
 
 set foldmethod=indent
 set foldlevel=99
@@ -53,6 +70,8 @@ colors zenburn
 let g:gitgutter_async=0
 let g:gitgutter_max_signs=9999
 
+" Map F6 to toggle NERDTree (use CTRL + w to swith between tree and file)
+nmap <F6> :NERDTreeToggle<CR>
 " let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " autocmd vimenter * NERDTree
 
@@ -79,8 +98,12 @@ au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
 " Use UNIX (\n) line endings.
 au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
 
+" Set the default file encoding to UTF-8:
+set encoding=utf-8
+
 " For full syntax highlighting:
 let python_highlight_all=1
+syntax on
 
 " Keep indentation level from previous line:
 autocmd FileType python set autoindent
