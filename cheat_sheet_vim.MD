@@ -23,11 +23,80 @@ git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/Vim
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/pack/vendor/start/gitgutter
 ```
 
+### Add NERDTree
+
+```
+git clone git@github.com:scrooloose/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+```
+
+### Better Colors
+
+```
+echo "export TERM=xterm-256color" >> ~/.zshrc
+
+wget https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -O ~/.vim/colors/zenburn.vim
+```
+
 And add the following to `~/.vimrc`
 
 ```
+set encoding=utf-8
+set noswapfile
+set nu
+syntax on
+
+set foldmethod=indent
+set foldlevel=99
+
+colors zenburn
+
 let g:gitgutter_async=0
 let g:gitgutter_max_signs=9999
+
+" let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+" autocmd vimenter * NERDTree
+
+"------------Start Python PEP 8 stuff----------------
+" Number of spaces that a pre-existing tab is equal to.
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+
+"spaces for indents
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py set softtabstop=4
+
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
+
+" Display tabs at the beginning of a line in Python mode as bad.
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+" Make trailing whitespace be flagged as bad.
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Wrap text after a certain number of characters
+au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
+
+" Use UNIX (\n) line endings.
+au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
+
+" For full syntax highlighting:
+let python_highlight_all=1
+
+" Keep indentation level from previous line:
+autocmd FileType python set autoindent
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+"Folding based on indentation:
+autocmd FileType python set foldmethod=indent
+"use space to open folds
+nnoremap <space> za 
+"----------Stop python PEP 8 stuff--------------
+
+
+"js stuff"
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 ```
 
 ### Case you prefer, use VimRuntime that comes with a lot of stuff
